@@ -1,2 +1,2 @@
 export DOCKER_BUILDKIT=1
-docker build -t entmike/discoart:preload -f preload.Dockerfile .
+docker build -t milangress/discoart:preload -f preload.Dockerfile .
