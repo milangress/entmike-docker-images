@@ -47,9 +47,9 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip install \
     numpy \
     torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
-#     jupyterlab ipywidgets jupyter-archive
+    jupyterlab ipywidgets jupyter-archive
 
-# RUN jupyter nbextension enable --py widgetsnbextension
+ RUN jupyter nbextension enable --py widgetsnbextension
 
 RUN pip install discoart
 
