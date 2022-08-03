@@ -93,5 +93,7 @@ ENV DISCOART_OUTPUT_DIR='/workspace/out'
 
 RUN rm -Rf /root/.cache && mkdir -p /models/.cache && ln -s /models/.cache /root
 ADD workermode /workermode
-CMD [ "/start.sh" ]
+#CMD [ "/start.sh" ]
+WORKDIR /discoart-ui
+RUN yarn start
 EXPOSE 3000
