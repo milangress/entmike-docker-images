@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Container Started"
 
+export DISCOART_REMOTE_MODELS_URL='https://www.feverdreams.app/models.yaml'
+
 cd /discoart-ui
 yarn start
 echo "Start Disco UI"
