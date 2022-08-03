@@ -25,5 +25,8 @@ then
         --ServerApp.token=$JUPYTER_PASSWORD --ServerApp.allow_origin=* --ServerApp.preferred_dir=/workspace
     echo "Jupyter Lab Started"
 else
+    cd /discoart-ui
+    yarn start
+    echo "Start Disco UI"
     sleep infinity
 fi
