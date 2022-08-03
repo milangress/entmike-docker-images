@@ -39,7 +39,7 @@ RUN git clone https://github.com/Run-Pod/discoart-ui.git
 WORKDIR /discoart-ui
 RUN yarn && yarn build
 
-RUN yarn install pm2 -g
+RUN npm install pm2 -g
 
 WORKDIR /workspace
 
