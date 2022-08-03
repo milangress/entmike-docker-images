@@ -37,7 +37,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /
 RUN git clone https://github.com/Run-Pod/discoart-ui.git
 WORKDIR /discoart-ui
-RUN yarn && yarn build && yarn start
+RUN yarn && yarn build
 
 WORKDIR /workspace
 
@@ -93,7 +93,5 @@ ENV DISCOART_OUTPUT_DIR='/workspace/out'
 
 RUN rm -Rf /root/.cache && mkdir -p /models/.cache && ln -s /models/.cache /root
 ADD workermode /workermode
-#CMD [ "/start.sh" ]
-WORKDIR /discoart-ui
-RUN yarn start
+CMD [ "/start.sh" ]
 EXPOSE 3000
