@@ -1,6 +1,10 @@
 #!/bin/bash
 echo "Container Started"
 
+cd /discoart-ui
+yarn start
+echo "Start Disco UI"
+
 if [[ $PUBLIC_KEY ]]
 then
     mkdir -p ~/.ssh
@@ -13,7 +17,7 @@ then
     echo "SSH Service Started"
 fi
 
-if [[ $JUPYTER_PASSWORD ]]
+if [[ $JUPYTER_PASSWORD = START ]]
 then
     ln -sf /examples /workspace
     ln -sf /root/welcome.ipynb /workspace
@@ -25,8 +29,5 @@ then
         --ServerApp.token=$JUPYTER_PASSWORD --ServerApp.allow_origin=* --ServerApp.preferred_dir=/workspace
     echo "Jupyter Lab Started"
 else
-    cd /discoart-ui
-    yarn start
-    echo "Start Disco UI"
     sleep infinity
 fi
