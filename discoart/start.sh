@@ -3,7 +3,7 @@ echo "Container Started"
 
 export DISCOART_REMOTE_MODELS_URL='https://www.feverdreams.app/models.yaml'
 
-wget -O models.yaml https://www.feverdreams.app/models.yaml
+wget -O ../models.yaml https://www.feverdreams.app/models.yaml
 echo "Downloaded models.yaml"
 
 cd /discoart-ui
